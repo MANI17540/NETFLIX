@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .signin-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .signin-form {
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 40px;
+            border-radius: 5px;
+            text-align: center;
+            color: #fff;
+            width: 300px;
+        }
+
+        .signin-form h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .signin-form input[type="text"],
+        .signin-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .signin-form input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .signin-form .btn {
+            background-color: #e50914;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .signin-form .btn:hover {
+            background-color: #f6121d;
+        }
+
+        .signin-form .help-links {
+            margin-top: 15px;
+        }
+
+        .signin-form .help-links a {
+            color: #b3b3b3;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .signin-form .help-links a:hover {
+            text-decoration: underline;
+        }
+
+        .signin-form .signup {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .signin-form .signup a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .signin-form .signup a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="signin-container">
+        <div class="signin-form">
+            <h1>Sign In</h1>
+            <input type="text" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="signinBtn" class="btn" onclick="signIn()">Sign In</button>
+            <div class="help-links">
+                <label><input type="checkbox"> Remember me</label>
+                <span> | </span>
+                <a href="#">Need help?</a>
+            </div>
+            <div class="signup">
+                New to Netflix? <a href="#">Sign up now</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function signIn() {
+            window.location.href = "netflix.html"; // Change "anotherPage.html" to the actual page you want to navigate to.
+        }
+    </script>
+</body>
+</html>

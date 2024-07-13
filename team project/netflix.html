@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <title>Netflix Clone</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    header {
+      padding: 20px;
+      background-color: #000;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #222;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    section {
+      padding: 20px;
+      display: none;
+    }
+
+    .featured-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .movie-card {
+      width: 200px;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .movie-card img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s;
+      margin-bottom: 5px;
+    }
+
+    .movie-card:hover img {
+      transform: scale(1.1);
+    }
+
+    h3 {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    h3:hover {
+      color: red;
+    }
+
+    footer {
+      padding: 20px;
+      background-color: #000;
+      text-align: center;
+    }
+
+    .logo {
+      width: 200px;
+      height: 100px;
+    }
+
+    .active {
+      display: block;
+    }
+  </style>
+  <script src="//code.tidio.co/24bjtyksqktwzrkspj3j6edxixm128mm.js" async>
+    
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('section').forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // Remove 'active' class from all nav links
+      document.querySelectorAll('nav a').forEach(link => {
+        link.classList.remove('active');
+      });
+
+      // Show the selected section
+      document.getElementById(sectionId).style.display = 'block';
+
+      // Add 'active' class to the clicked nav link
+      document.querySelector(`nav a[onclick="showSection('${sectionId}')"]`).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <img class="logo" src="netflix.png" alt="">
+  </header>
+
+  <nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('tv-shows')">TV Shows</a>
+    <a onclick="showSection('movies')">Movies</a>
+    <a onclick="showSection('new-popular')">New & Popular</a>
+    <a onclick="showSection('my-list')">My List</a>
+  </nav>
+
+  <section id="home" class="active">
+    <header>
+      <h1>TELUGU MOVIES</h1>
+    </header>
+    <div class="featured-content">
+      <a href="salaar trailer.mp4" class="movie-card">
+        <img src="salaar.jpg" alt="Movie 1">
+        <h3>SALAAR</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="gunturkaaram.jpg" alt="Movie 2">
+        <h3>GUNTUR KAARAM</h3>
+      </a>
+      <a href="Hi Nanna trailer.mp4" class="movie-card">
+        <img src="hi nanna.jpeg" alt="Movie 3">
+        <h3>HI NANNA</h3>
+      </a>
+      <a href="Pushpa Official Trailer.mp4" class="movie-card">
+        <img src="pushpa 1.jpg" alt="Movie 4">
+        <h3>PUSHPA 1</h3>
+      </a>
+      <a href="RULES RANJANN Trailer.mp4" class="movie-card">
+        <img src="rules ranjan.jpeg" alt="Movie 5">
+        <h3>RULES RANJAN</h3>
+      </a>
+      <a href="mad trailer.mp4" class="movie-card">
+        <img src="mad.jpeg" alt="Movie 6">
+        <h3>MAD</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="macherla.jpeg" alt="Movie 7">
+        <h3>MACHERLA</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="aadikesava.jpeg" alt="Movie 8">
+        <h3>AADIKESAVA</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="adipurush.jpeg" alt="Movie 9">
+        <h3>ADIPURUSH</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="bhagavanth kesari.jpeg" alt="Movie 10">
+        <h3>BHAGAVANTH KESARI</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="bro.jpeg" alt="Movie 11">
+        <h3>BRO</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="custody.jpeg" alt="Movie 12">
+        <h3>CUSTODY</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="kushi.jpeg" alt="Movie 13">
+        <h3>KUSHI</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="meter.jpeg" alt="Movie 14">
+        <h3>METER</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="prema vimanam.jpeg" alt="Movie 15">
+        <h3>PREMA VIMANAM</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="ramabhanam.jpeg" alt="Movie 16">
+        <h3>RAMABHANAM</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="saptha saaagaralu daati.jpeg" alt="Movie 17">
+        <h3>SAPTHA SAAAGARALU DAATI</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="tiger nageswar rao.jpeg" alt="Movie 18">
+        <h3>TIGER NAGESWAR RAO</h3>
+      </a>
+    </div>
+  </section>
+
+  <section id="tv-shows">
+    <header>
+      <h1>TV Shows</h1>
+    </header>
+    <div class="featured-content">
+      <!-- Placeholder content for TV Shows -->
+      <a href="#" class="movie-card">
+        <img src="salaar trailer.mp4" alt="TV Show 1">
+        <h3>salaar</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="tvshow2.jpg" alt="TV Show 2">
+        <h3>TV Show 2</h3>
+      </a>
+    </div>
+  </section>
+
+  <section id="movies">
+    <header>
+      <h1>Movies</h1>
+    </header>
+    <div class="featured-content">
+      <!-- Placeholder content for Movies -->
+      <a href="salaar trailer.mp4" class="movie-card">
+        <img src="salaar.jpg" alt="Movie 1">
+        <h3>SALAAR</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="gunturkaaram.jpg" alt="Movie 2">
+        <h3>GUNTUR KAARAM</h3>
+      </a>
+      <a href="Hi Nanna trailer.mp4" class="movie-card">
+        <img src="hi nanna.jpeg" alt="Movie 3">
+        <h3>HI NANNA</h3>
+      </a>
+      <a href="Pushpa Official Trailer.mp4" class="movie-card">
+        <img src="pushpa 1.jpg" alt="Movie 4">
+        <h3>PUSHPA 1</h3>
+      </a>
+      <a href="RULES RANJANN Trailer.mp4" class="movie-card">
+        <img src="rules ranjan.jpeg" alt="Movie 5">
+        <h3>RULES RANJAN</h3>
+      </a>
+      <a href="mad trailer.mp4" class="movie-card">
+        <img src="mad.jpeg" alt="Movie 6">
+        <h3>MAD</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="macherla.jpeg" alt="Movie 7">
+        <h3>MACHERLA</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="aadikesava.jpeg" alt="Movie 8">
+        <h3>AADIKESAVA</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="adipurush.jpeg" alt="Movie 9">
+        <h3>ADIPURUSH</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="bhagavanth kesari.jpeg" alt="Movie 10">
+        <h3>BHAGAVANTH KESARI</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="bro.jpeg" alt="Movie 11">
+        <h3>BRO</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="custody.jpeg" alt="Movie 12">
+        <h3>CUSTODY</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="kushi.jpeg" alt="Movie 13">
+        <h3>KUSHI</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="meter.jpeg" alt="Movie 14">
+        <h3>METER</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="prema vimanam.jpeg" alt="Movie 15">
+        <h3>PREMA VIMANAM</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="ramabhanam.jpeg" alt="Movie 16">
+        <h3>RAMABHANAM</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="saptha saaagaralu daati.jpeg" alt="Movie 17">
+        <h3>SAPTHA SAAAGARALU DAATI</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="tiger nageswar rao.jpeg" alt="Movie 18">
+        <h3>TIGER NAGESWAR RAO</h3>
+      </a>
+    </div>
+  </section>
+
+  <section id="new-popular">
+    <header>
+      <h1>New & Popular</h1>
+    </header>
+    <div class="featured-content">
+      <!-- Placeholder content for New & Popular -->
+      <a href="#" class="movie-card">
+        <img src="new1.jpg" alt="New & Popular 1">
+        <h3>New & Popular 1</h3>
+      </a>
+      <a href="#" class="movie-card">
+        <img src="new2.jpg" alt="New & Popular 2">
+        <h3>New & Popular 2</h3>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+
+      <p>&copy; 2024 Netflix Clone</p>
+    </footer>
+    
+  </body>
+  </html>
